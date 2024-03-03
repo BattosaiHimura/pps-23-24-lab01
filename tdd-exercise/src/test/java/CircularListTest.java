@@ -3,14 +3,13 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 
 import tdd.CircularList;
+import tdd.CircularListImpl;
 
 /**
  * The test suite for testing the CircularList implementation
@@ -21,7 +20,7 @@ class CircularListTest {
 
     @BeforeEach
     void BeforeEach() {
-        this.list = new CircularList();
+        this.list = new CircularListImpl();
     }
 
     @Test
@@ -58,7 +57,6 @@ class CircularListTest {
     void testNextWhenEmpty() {
         Optional<Integer> empty = Optional.empty();
         assertEquals(empty, this.list.next());
-        assertNull(this.list.next().get());
     }
 
     @Test
@@ -81,8 +79,7 @@ class CircularListTest {
     @Test
     void testPreviousWhenEmpty() {
         Optional<Integer> empty = Optional.empty();
-        assertEquals(empty, this.list.next());
-        assertNull(this.list.next().get());
+        assertEquals(empty, this.list.previous());
     }
 
     @Test
