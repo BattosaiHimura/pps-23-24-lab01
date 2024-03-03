@@ -5,9 +5,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Iterator;
+import tdd2.IterableCircularList;
 
-import tdditerator.IterableCircularList;
+import java.util.Iterator;
 
 class IterableCircularListTest {
     
