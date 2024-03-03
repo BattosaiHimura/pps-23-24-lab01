@@ -7,6 +7,7 @@ import java.util.function.Predicate;
 import java.util.Optional;
 
 import tdd3.FilterableCircularList;
+import tdd3.FilterableCircularListImpl;
 
 class FilterableCircularListTest {
     
@@ -14,7 +15,7 @@ class FilterableCircularListTest {
 
     @BeforeEach
     void BeforeEach() {
-        this.list = null;
+        this.list = new FilterableCircularListImpl();
     }
 
     @Test
