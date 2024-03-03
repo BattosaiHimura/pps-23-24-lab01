@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import tdd2.IterableCircularList;
+import tdd2.IterableCircularListImpl;
 
 import java.util.Iterator;
 
@@ -15,7 +16,7 @@ class IterableCircularListTest {
 
     @BeforeEach
     void BeforeEach() {
-        this.list = null;
+        this.list = new IterableCircularListImpl();
     }
 
     @Test
@@ -73,7 +74,6 @@ class IterableCircularListTest {
 
     @Test
     void emptyBackwardIterator() {
-        this.list.add(1);
         assertFalse(this.list.forwardIterator().hasNext());
     }
 
