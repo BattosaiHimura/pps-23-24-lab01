@@ -7,11 +7,11 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Iterator;
 
-import tdditerator.CircularListIterator;
+import tdditerator.IterableCircularList;
 
-class CircularListIteratorTest {
+class IterableCircularListTest {
     
-    private CircularListIterator list;
+    private IterableCircularList list;
 
     @BeforeEach
     void BeforeEach() {
